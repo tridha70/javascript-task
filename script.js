@@ -1,161 +1,214 @@
-// Task 1 : Employee Registration
-const companyName = "Stackly";
-let employeeName = prompt("Maneesha:");
-let employeeID = "STK-26-3900";
 
-console.log("Company : " + companyName);
-console.log("Employee Name : " + employeeName);
-console.log("Employee ID : " + employeeID);
+// Task 1 - Employee Profile
 
-// Task 2 : College Admission
-
-const collegeName = "JNTU";
-let studentName = prompt("Enter Student Name:");
-let course = prompt("ECE:");
-
-console.log("College : " + collegeName);
-console.log("Student : " + studentName);
-console.log("Course : " + course);
-
-// Task 3 : Food Order
-
-const restaurantName = "Food Park";
-let customerName = prompt("Customer Name:");
-let foodName = prompt("Food Name:");
-let quantity = prompt("Quantity:");
-
-console.log("Restaurant : " + restaurantName);
-console.log("Customer : " + customerName);
-console.log("Food : " + foodName);
-console.log("Quantity : " + quantity);
-
-// Task 4 : Hospital Registration
-
-const hospitalName = "Apollo";
-let patientName = prompt("Patient Name:");
-let tokenNumber = prompt("Token Number:");
-
-console.log("Hospital : " + hospitalName);
-console.log("Patient : " + patientName);
-console.log("Token : " + tokenNumber);
-
-// Task 5 : Movie Ticket Booking
-
-const theatreName = "PVR Cinemas";
-let movieName = prompt("Movie Name:");
-let movieCustomer = prompt("Customer Name:");
-let seatNumber = prompt("Seat Number:");
-
-console.log("Theatre : " + theatreName);
-console.log("Movie : " + movieName);
-console.log("Customer : " + movieCustomer);
-console.log("Seat Number : " + seatNumber);
-
-// Task 6 : Mobile Shop
-
-const shopName = "Sangeetha Mobiles";
-let mobileCustomer = prompt("Customer Name:");
-let mobileModel = prompt("Mobile Model:");
-let price = prompt("Mobile Price:");
-
-console.log("Shop : " + shopName);
-console.log("Customer : " + mobileCustomer);
-console.log("Mobile Model : " + mobileModel);
-console.log("Price : " + price);
-
-// Task 7 : Gym Membership
-
-const gymName = "Fitness World";
-let memberName = prompt("Member Name:");
-let membershipFee = prompt("Membership Fee:");
-
-console.log("Gym : " + gymName);
-console.log("Member : " + memberName);
-console.log("Membership Fee : " + membershipFee);
-
-// Task 8 : ATM Welcome Screen
-
-const bankName = "SBI";
-let userName = prompt("User Name:");
-
-console.log("Welcome " + userName);
-console.log("Bank : " + bankName);
-
-// Task 9 : Bus Ticket
-
-const travelsName = "Orange Travels";
-let passengerName = prompt("Passenger Name:");
-let busSeat = prompt("Seat Number:");
-
-
-console.log("Travels : " + travelsName);
-console.log("Passenger : " + passengerName);
-console.log("Seat Number : " + busSeat);
-
-// Task 10 : Online Shopping
-
-const websiteName = "Amazon";
-let productName = prompt("Product Name:");
-let shoppingCustomer = prompt("Customer Name:");
-let productPrice = prompt("Product Price:");
-
-console.log("Website : " + websiteName);
-console.log("Product : " + productName);
-console.log("Customer : " + shoppingCustomer);
-console.log("Price : " + Price);
-
-// Task 11 : console.log()
-
-console.log("Registration Successful");
-
-// Task 12 : console.error()
-
-console.error("Payment Failed");
-
-// Task 13 : console.warn()
-
-console.warn("Battery Low");
-
-// Task 14 : console.clear()
-
-console.log("Loading...");
-console.log("Welcome");
-console.clear();
-
-// Task 15 : alert()
-
-alert("Welcome to Amazon");
-
-// Task 16 : confirm()
-
-let logout = confirm("Do you want to logout?");
-console.log(logout);
-
-// Task 17 : prompt()
-
-let city = prompt(" Your City:");
-console.log("Your City : " + city  );
-
-// Task 18 : var Practice
-
-var product = "Laptop";
-product = "Mobile";
-var product = "Tablet";
-
-console.log("Product : " + product);
-
-
-
-// Task 19 : let Practice
-
+let name = "Maneesha";
+let employeeId = "STY-26-3900";
+let department = "Frontend";
 let salary = 25000;
-salary = 30000;
+let isPermanent = true;
 
-console.log("Salary : " + salary);
+console.log("Name :", name);
+console.log("Employee ID :", employeeId);
+console.log("Department :", department);
+console.log("Salary :", salary);
+console.log("Permanent :", isPermanent);
+
+// Task 2 - Student Details
+
+let student = {
+    name: "Tridha",
+    age: 25,
+    course: "B.Tech",
+    college: "JNTU",
+    passed: true
+};
+
+console.log("Student Name :", student.name);
+console.log("Course :", student.course);
+console.log("Passed Status :", student.passed);
+
+// Task 3 - Shopping Cart
+
+let products = ["Milk", "Rice", "Oil", "Sugar", "Soap"];
+
+console.log("First Product :", products[0]);
+console.log("Third Product :", products[2]);
+console.log("Last Product :", products[products.length - 1]);
+console.log("Total Products :", products.length);
+
+// Task 4 - Company Employee Database
+
+let employee = {
+    name: "Maneesha",
+    designation: "Frontend Developer",
+    salary: 35000,
+    skills: ["HTML", "CSS", "JavaScript", "React"]
+};
+
+console.log("Employee Name :", employee.name);
+console.log("Designation :", employee.designation);
+console.log("Second Skill :", employee.skills[1]);
+
+// Task 5 - Salary Calculation
+
+let basicSalary = 25000;
+let bonus = 5000;
+
+let totalSalary = basicSalary + bonus;
+
+console.log("Total Salary :", totalSalary);
+
+// Task 6 - GST Calculator
+
+let productPrice = 4500;
+let gst = 18;
+
+let gstAmount = productPrice * gst / 100;
+let finalAmount = productPrice + gstAmount;
+
+console.log("GST Amount :", gstAmount);
+console.log("Final Amount :", finalAmount);
+
+// Task 7 - Even or Odd
+
+let number = 25;
 
 
-// Task 20 : const Practice
+console.log(number % 2 === 0 ? "Even Number" : "Odd Number");
 
-const company = "Google";
+// Task 8 - Login System
 
-console.log("Company : " + company);
+let username = "admin";
+let password = "12345";
+
+if (username === "admin" && password === "12345") {
+    console.log("Login Success");
+} else {
+    console.log("Invalid Credentials");
+}
+
+// Task 9 - Voting Eligibility
+
+let age = 22;
+
+console.log(age >= 18 ? "Eligible for Vote" : "Not Eligible");
+
+// Task 10 - EMI Eligibility
+
+let monthlySalary = 40000;
+let experience = 3;
+
+console.log(monthlySalary > 30000 && experience >= 2
+    ? "Eligible"
+    : "Not Eligible");
+
+// Task 11 - Product Discount
+
+let price = 5000;
+let discount = 10;
+
+let discountAmount = price * discount / 100;
+let finalPrice = price - discountAmount;
+
+console.log("Discount Amount :", discountAmount);
+console.log("Final Price :", finalPrice);
+
+// Task 12 - User Registration
+
+let userName = "Naveen";
+let email = "naveen@gmail.com";
+let phone = "9876543210";
+let city = "Hyderabad";
+
+console.log("----- User Details -----");
+console.log("Name :", userName);
+console.log("Email :", email);
+console.log("Phone :", phone);
+console.log("City :", city);
+
+// Task 13 - Social Media Profile
+
+let profile = {
+    username: "Maneesha123",
+    followers: 2500,
+    following: 800,
+    posts: 150,
+    verified: true
+};
+
+console.log("Username :", profile.username);
+console.log("Followers :", profile.followers);
+console.log("Verified Status :", profile.verified);
+
+// Task 14 - Restaurant Menu
+
+let menu = ["Idli", "Dosa", "Poori", "Meals", "Parotta"];
+
+console.log("Second Item :", menu[1]);
+console.log("Fourth Item :", menu[3]);
+console.log("Last Item :", menu[4]);
+
+// Task 15 - Banking System
+
+let accountBalance = 25000;
+let withdraw = 8000;
+
+let remainingBalance = accountBalance - withdraw;
+
+
+console.log("Remaining Balance :", remainingBalance);
+
+// Task 16 - Mobile Store
+
+let mobilePrice = 25000;
+let exchange = 5000;
+let coupon = 2000;
+
+let finalMobileAmount = mobilePrice - exchange - coupon;
+
+console.log("Final Amount :", finalMobileAmount);
+
+// Task 17 - Employee Promotion
+
+let exp = 5;
+let performance = true;
+
+if (exp >= 5 && performance === true) {
+    console.log("Promotion Approved");
+} else {
+    console.log("Promotion Pending");
+}
+
+// Task 18 - Movie Ticket
+
+let ticketPrice = 180;
+let people = 5;
+
+let totalAmount = ticketPrice * people;
+
+console.log("Total Amount :", totalAmount);
+
+// Task 19 - Weather App
+
+let temperature = 38;
+
+console.log(temperature >= 35 ? "Hot Day" : "Normal Weather");
+
+// Task 20 - Mini HR Management
+
+let employeeDetails = {
+    empCode: "EMP1001",
+    name: "Rahul",
+    department: "Frontend",
+    designation: "Associate Software Engineer",
+    salary: 28000,
+    skills: ["HTML", "CSS", "JavaScript", "React"],
+    permanent: true
+};
+
+console.log("Employee Code :", employeeDetails.empCode);
+console.log("Employee Name :", employeeDetails.name);
+console.log("Department :", employeeDetails.department);
+console.log("Salary :", employeeDetails.salary);
+console.log("Last Skill :", employeeDetails.skills[employeeDetails.skills.length - 1]);
+console.log("Permanent Status :", employeeDetails.permanent);
