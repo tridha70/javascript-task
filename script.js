@@ -1,249 +1,263 @@
-// Task 1: Student Registration Form
+// Task 1 – Student Registration
 
 let studentName = "Maneesha";
-let age = 25;
 let department = "ECE";
-let cgpa = 8.5;
+let cgpa = 8.6;
 
-console.log("Student Name:", studentName);
-console.log("Age:", age);
-console.log("Department:", department);
-console.log("CGPA:", cgpa);
+console.log("Student Name :", studentName);
+console.log("Department :", department);
+console.log("CGPA :", cgpa);
+console.log("Status :", cgpa >= 7 ? "Eligible" : "Not Eligible");
 
-// Task 2: Employee Details
+// Task 2 – Online Shopping Bill
 
-let employee = {
-    employeeId: "STK-26-3600",
-    employeeName: "Maneesha",
-    department: "IT",
-    salary: 45000
-};
+let productPrice = 2500;
+let quantity = 3;
 
-console.log("Employee Name:", employee.employeeName);
-console.log("Salary:", employee.salary);
+let total = productPrice * quantity;
+let discount = total > 5000 ? total * 0.10 : 0;
+let finalPrice = total - discount;
 
-//Task 3: Shopping Cart
+console.log("Total :", total);
+console.log("Discount :", discount);
+console.log("Final Price :", finalPrice);
 
-let products = ["Laptop", "Mouse", "Keyboard", "Monitor", "Headset"];
+// Task 3 – Employee Salary
 
-console.log("First Product:", products[0]);
-console.log("Last Product:", products[products.length - 1]);
-console.log("Total Products:", products.length);
+let basicSalary = 35000;
+let bonus = 5000;
+let tax = 3000;
 
-// Task 4: Student Marks
+let netSalary = basicSalary + bonus - tax;
 
-let english = 80;
-let maths = 90;
-let science = 85;
-let social = 88;
-let computer = 95;
+console.log("Basic Salary :", basicSalary);
+console.log("Bonus :", bonus);
+console.log("Tax :", tax);
+console.log("Net Salary :", netSalary);
 
-let total = english + maths + science + social + computer;
-let average = total / 5;
+// Task 4 – Movie Ticket Booking
 
-console.log("Total Marks:", total);
-console.log("Average:", average);
+let movie = "Leo";
+let ticketPrice = 180;
+let tickets = 5;
 
- //Task 5: Age Checker
+console.log("Movie :", movie);
+console.log("Tickets :", tickets);
+console.log("Total :", ticketPrice * tickets);
 
-let voterAge = 20;
-
-if (voterAge >= 18) {
-    console.log("Eligible to Vote");
-} else {
-    console.log("Not Eligible");
-}
-
-// Task 6: Login System
+// Task 5 – Login System
 
 let username = "admin";
 let password = "12345";
 
 if (username === "admin" && password === "12345") {
-    console.log("Login Successful");
+    console.log("Login Success");
 } else {
     console.log("Invalid Username or Password");
 }
 
-// Task 7: Calculator
+// Task 6 – Electricity Bill
 
-let num1 = 20;
-let num2 = 10;
-
-console.log("Addition:", num1 + num2);
-console.log("Subtraction:", num1 - num2);
-console.log("Multiplication:", num1 * num2);
-console.log("Division:", num1 / num2);
-console.log("Modulus:", num1 % num2);
-
-// Task 8: Electricity Bill
-
-let customerName = "Suresh";
-let units = 150;
-let bill = 0;
+let units = 250;
+let bill;
 
 if (units <= 100) {
-    bill = units * 2;
+    bill = units * 5;
 } else if (units <= 200) {
-    bill = units * 4;
+    bill = (100 * 5) + ((units - 100) * 7);
 } else {
-    bill = units * 6;
+    bill = (100 * 5) + (100 * 7) + ((units - 200) * 10);
 }
 
-console.log("Customer Name:", customerName);
-console.log("Units:", units);
-console.log("Bill Amount: ₹" + bill);
+console.log("Units :", units);
+console.log("Total Bill :", bill);
 
-// Task 9: Employee Salary
+// Task 7 – Restaurant Order
 
-let basicSalary = 30000;
-let bonus = 5000;
+let menu = ["Dosa", "Idly", "Poori", "Meals"];
 
-let grossSalary = basicSalary + bonus;
+console.log("First Item :", menu[0]);
+console.log("Last Item :", menu[menu.length - 1]);
+console.log("Total Items :", menu.length);
 
-console.log("Gross Salary: ₹" + grossSalary);
+menu.push("Fried Rice");
+menu.splice(1, 1);
 
-// Task 10: Movie Ticket Price
+console.log("Updated Menu :", menu);
 
-let ticketPrice = 200;
-let numberOfTickets = 4;
+// Task 8 – Employee Object
 
-let totalAmount = ticketPrice * numberOfTickets;
+let employee = {
+    name: "Maneesha",
+    role: "Frontend Developer",
+    salary: 40000
+};
 
-console.log("Ticket Price: ₹" + ticketPrice);
-console.log("Tickets:", numberOfTickets);
-console.log("Total Amount: ₹" + totalAmount);
+console.log("Employee Name :", employee.name);
+console.log("Role :", employee.role);
+console.log("Salary :", employee.salary);
 
-// Task 11: Product Discount
+// Task 9 – Product Inventory
 
-let productName = "Laptop";
-let price = 60000;
-let discount;
-let finalPrice;
+let products = [
+    "Mouse",
+    "Keyboard",
+    "Monitor",
+    "CPU",
+    "Speaker"
+];
 
-if (price > 5000) {
-    discount = price * 0.20;
-} else {
-    discount = price * 0.10;
+for (let i = 0; i < products.length; i++) {
+    console.log(i + 1, products[i]);
 }
 
-finalPrice = price - discount;
+// Task 10 – Function
 
-console.log("Product:", productName);
-console.log("Original Price: ₹" + price);
-console.log("Discount: ₹" + discount);
-console.log("Final Price: ₹" + finalPrice);
-
-// Task 12: Function Practice
-
-function studentDetails(name, dept, cgpa) {
-  
-    console.log("Student Name:", name);
-    console.log("Department:", dept);
-    console.log("CGPA:", cgpa);
+function calculateArea(length, width) {
+    return length * width;
 }
 
-studentDetails("Naveen", "Computer Science", 8.8);
+console.log("Area =", calculateArea(20, 10));
 
-// Task 13: Bank Balance
+// Task 11 – Bank Deposit
 
-let accountHolder = "Maneesha";
-let currentBalance = 50000;
-let withdrawAmount = 10000;
+let balance = 5000;
 
-let remainingBalance = currentBalance - withdrawAmount;
+function deposit(amount) {
+    balance += amount;
+}
 
-console.log("Account Holder:", accountHolder);
-console.log("Current Balance: ₹" + currentBalance);
-console.log("Withdraw Amount: ₹" + withdrawAmount);
-console.log("Remaining Balance: ₹" + remainingBalance);
+function withdraw(amount) {
+    balance -= amount;
+}
 
-// Task 14: Mobile Recharge
+deposit(2000);
+withdraw(1000);
 
-let mobileNumber = "9019677060";
-let rechargeAmount = 299;
+console.log("Final Balance :", balance);
 
-console.log("Recharge Successful");
-console.log("Mobile Number:", mobileNumber);
-console.log("Recharge Amount: ₹" + rechargeAmount);
+// Task 12 – Callback Function
 
-// Task 15: Restaurant Bill
+function addition(a, b) {
+    return a + b;
+}
 
-let foodName = "Chicken Biryani";
-let quantity = 3;
-let foodPrice = 250;
+function calculate(callback, a, b) {
+    console.log(callback(a, b));
+    console.log("Calculation Completed");
+}
 
-let totalBill = quantity * foodPrice;
+calculate(addition, 10, 20);
 
-console.log("Food Name:", foodName);
-console.log("Quantity:", quantity);
-console.log("Price Per Item: ₹" + foodPrice);
-console.log("Total Bill: ₹" + totalBill);
+// Task 13 – Generator Function
 
+function* couponGenerator() {
+    yield "WELCOME10";
+    yield "SAVE20";
+    yield "SUPER30";
+    yield "BIG50";
+    yield "MEGA100";
+}
 
-// ==========================================
-// Employee Management System (Console Based)
-// ==========================================
+let coupon = couponGenerator();
 
-function addEmployee(id, name, department, basicSalary, bonus, experience, skills) {
+console.log(coupon.next().value);
+console.log(coupon.next().value);
+console.log(coupon.next().value);
+console.log(coupon.next().value);
+console.log(coupon.next().value);
 
-    let grossSalary = basicSalary + bonus;
+// Task 14 – Currying
 
-    let employee = {
-        employeeId: id,
-        employeeName: name,
-        department: department,
-        basicSalary: basicSalary,
-        bonus: bonus,
-        grossSalary: grossSalary,
-        experience: experience,
-        skills: skills
+function calculateDiscount(a) {
+    return function (b) {
+        return function (c) {
+            return a + b + c;
+        };
     };
-
-    console.log("======================================");
-    console.log("      EMPLOYEE MANAGEMENT SYSTEM");
-    console.log("======================================");
-
-    console.log("Employee ID      :", employee.employeeId);
-    console.log("Employee Name    :", employee.employeeName);
-    console.log("Department       :", employee.department);
-    console.log("Basic Salary     : ₹" + employee.basicSalary);
-    console.log("Bonus            : ₹" + employee.bonus);
-    console.log("Gross Salary     : ₹" + employee.grossSalary);
-
-    console.log("--------------------------------------");
-
-    if (employee.experience >= 5) {
-        console.log("Experience Status : Senior Employee");
-    } else if (employee.experience >= 2) {
-        console.log("Experience Status : Mid Level Employee");
-    } else {
-        console.log("Experience Status : Fresher");
-    }
-
-    console.log("--------------------------------------");
-    console.log("Employee Skills:");
-
-    for (let i = 0; i < employee.skills.length; i++) {
-        console.log((i + 1) + ". " + employee.skills[i]);
-    }
-
-    console.log("======================================");
 }
 
-// Function Call
-addEmployee(
-    "STK-20-3600",
-    "Maneesha",
-    "Frontend Developer",
-    35000,
-    5000,
-    2,
-    [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React JS",
-        "GitHub"
-    ]
-);
+console.log(calculateDiscount(10)(20)(30));
+
+// Task 15 – Spread Operator
+
+let frontend = ["HTML", "CSS", "JS"];
+let backend = ["Node", "Express", "MongoDB"];
+
+let fullStack = [...frontend, ...backend];
+
+console.log(fullStack);
+
+// Task 16 – Rest Operator
+
+function sum(...numbers) {
+    let total = 0;
+
+    for (let num of numbers) {
+        total += num;
+    }
+
+    return total;
+}
+
+console.log(sum(10, 20, 30, 40, 50));
+
+// Task 17 – Array Destructuring
+
+let colors = ["Red", "Blue", "Green", "Yellow"];
+
+let [c1, c2, c3, c4] = colors;
+
+console.log(c1);
+console.log(c2);
+console.log(c3);
+console.log(c4);
+
+// Task 18 – Object Destructuring
+
+let user = {
+    name: "Maneesha",
+    city: "Hyderabad",
+    role: "Developer"
+};
+
+let { name, city, role } = user;
+
+console.log(name);
+console.log(city);
+console.log(role);
+
+// Task 19 – Shopping Cart
+
+let cart = ["Mobile", "Laptop", "Watch"];
+
+console.log("Original :", cart);
+
+cart.push("Headphones");
+console.log("After Push :", cart);
+
+cart.pop();
+console.log("After Pop :", cart);
+
+cart.shift();
+console.log("After Shift :", cart);
+
+cart.unshift("Tablet");
+console.log("After Unshift :", cart);
+
+// Task 20 – Product Search
+
+let productsList = [
+    "Laptop",
+    "Mouse",
+    "Keyboard",
+    "Monitor",
+    "Speaker"
+];
+
+if (productsList.includes("Monitor")) {
+    console.log("Product Available");
+} else {
+    console.log("Out of Stock");
+}
+
