@@ -1,263 +1,139 @@
-// Task 1 – Student Registration
+// DATE CONSTRUCTOR MINI PROJECT
 
-let studentName = "Maneesha";
-let department = "ECE";
-let cgpa = 8.6;
+// HOTEL BOOKING SYSTEM
 
-console.log("Student Name :", studentName);
-console.log("Department :", department);
-console.log("CGPA :", cgpa);
-console.log("Status :", cgpa >= 7 ? "Eligible" : "Not Eligible");
+console.log("HOTEL BOOKING SYSTEM");
+console.log("================================");
 
-// Task 2 – Online Shopping Bill
+// Customer Details
+let customerName = prompt("Enter Customer Name:");
+let phone = prompt("Enter Phone Number:");
 
-let productPrice = 2500;
-let quantity = 3;
+// ROOM MENU
 
-let total = productPrice * quantity;
-let discount = total > 5000 ? total * 0.10 : 0;
-let finalPrice = total - discount;
+console.log("------ ROOM TYPES ------");
+console.log("1. Standard Room - ₹1500");
+console.log("2. Deluxe Room   - ₹2500");
+console.log("3. Suite Room    - ₹4000");
 
-console.log("Total :", total);
-console.log("Discount :", discount);
-console.log("Final Price :", finalPrice);
+let roomChoice = Number(prompt("Select Room Type (1-3):"));
 
-// Task 3 – Employee Salary
+let roomType;
+let roomPrice;
 
-let basicSalary = 35000;
-let bonus = 5000;
-let tax = 3000;
+// ROOM SELECTION
 
-let netSalary = basicSalary + bonus - tax;
+switch (roomChoice) {
 
-console.log("Basic Salary :", basicSalary);
-console.log("Bonus :", bonus);
-console.log("Tax :", tax);
-console.log("Net Salary :", netSalary);
+    case 1:
+        roomType = "Standard Room";
+        roomPrice = 1500;
+        break;
 
-// Task 4 – Movie Ticket Booking
+    case 2:
+        roomType = "Deluxe Room";
+        roomPrice = 2500;
+        break;
 
-let movie = "Leo";
-let ticketPrice = 180;
-let tickets = 5;
+    case 3:
+        roomType = "Suite Room";
+        roomPrice = 4000;
+        break;
 
-console.log("Movie :", movie);
-console.log("Tickets :", tickets);
-console.log("Total :", ticketPrice * tickets);
-
-// Task 5 – Login System
-
-let username = "admin";
-let password = "12345";
-
-if (username === "admin" && password === "12345") {
-    console.log("Login Success");
-} else {
-    console.log("Invalid Username or Password");
+    default:
+        console.log("Invalid Room Selection");
 }
 
-// Task 6 – Electricity Bill
+// BOOKING DATE
 
-let units = 250;
-let bill;
+if (roomType) {
 
-if (units <= 100) {
-    bill = units * 5;
-} else if (units <= 200) {
-    bill = (100 * 5) + ((units - 100) * 7);
-} else {
-    bill = (100 * 5) + (100 * 7) + ((units - 200) * 10);
-}
+    let checkInDay = Number(prompt("Enter Check-in Day:"));
+    let checkInMonth = Number(prompt("Enter Check-in Month:"));
+    let checkInYear = Number(prompt("Enter Check-in Year:"));
 
-console.log("Units :", units);
-console.log("Total Bill :", bill);
+    let numberOfDays = Number(
+        prompt("Enter Number of Days:")
+    );
 
-// Task 7 – Restaurant Order
+    // DATE CONSTRUCTOR
+  
+    let checkInDate = new Date(
+        checkInYear,
+        checkInMonth - 1,
+        checkInDay
+    );
 
-let menu = ["Dosa", "Idly", "Poori", "Meals"];
+    // CHECK-OUT DATE
+   
+    let checkOutDate = new Date(checkInDate);
 
-console.log("First Item :", menu[0]);
-console.log("Last Item :", menu[menu.length - 1]);
-console.log("Total Items :", menu.length);
+    checkOutDate.setDate(
+        checkOutDate.getDate() + numberOfDays
+    );
 
-menu.push("Fried Rice");
-menu.splice(1, 1);
+    // ROOM BILL
 
-console.log("Updated Menu :", menu);
+    let totalAmount = roomPrice * numberOfDays;
 
-// Task 8 – Employee Object
+    let discount = 0;
 
-let employee = {
-    name: "Maneesha",
-    role: "Frontend Developer",
-    salary: 40000
-};
+    if (totalAmount >= 10000) {
 
-console.log("Employee Name :", employee.name);
-console.log("Role :", employee.role);
-console.log("Salary :", employee.salary);
+        discount = totalAmount * 0.10;
 
-// Task 9 – Product Inventory
+    } else if (totalAmount >= 5000) {
 
-let products = [
-    "Mouse",
-    "Keyboard",
-    "Monitor",
-    "CPU",
-    "Speaker"
-];
+        discount = totalAmount * 0.05;
 
-for (let i = 0; i < products.length; i++) {
-    console.log(i + 1, products[i]);
-}
+    } else {
 
-// Task 10 – Function
-
-function calculateArea(length, width) {
-    return length * width;
-}
-
-console.log("Area =", calculateArea(20, 10));
-
-// Task 11 – Bank Deposit
-
-let balance = 5000;
-
-function deposit(amount) {
-    balance += amount;
-}
-
-function withdraw(amount) {
-    balance -= amount;
-}
-
-deposit(2000);
-withdraw(1000);
-
-console.log("Final Balance :", balance);
-
-// Task 12 – Callback Function
-
-function addition(a, b) {
-    return a + b;
-}
-
-function calculate(callback, a, b) {
-    console.log(callback(a, b));
-    console.log("Calculation Completed");
-}
-
-calculate(addition, 10, 20);
-
-// Task 13 – Generator Function
-
-function* couponGenerator() {
-    yield "WELCOME10";
-    yield "SAVE20";
-    yield "SUPER30";
-    yield "BIG50";
-    yield "MEGA100";
-}
-
-let coupon = couponGenerator();
-
-console.log(coupon.next().value);
-console.log(coupon.next().value);
-console.log(coupon.next().value);
-console.log(coupon.next().value);
-console.log(coupon.next().value);
-
-// Task 14 – Currying
-
-function calculateDiscount(a) {
-    return function (b) {
-        return function (c) {
-            return a + b + c;
-        };
-    };
-}
-
-console.log(calculateDiscount(10)(20)(30));
-
-// Task 15 – Spread Operator
-
-let frontend = ["HTML", "CSS", "JS"];
-let backend = ["Node", "Express", "MongoDB"];
-
-let fullStack = [...frontend, ...backend];
-
-console.log(fullStack);
-
-// Task 16 – Rest Operator
-
-function sum(...numbers) {
-    let total = 0;
-
-    for (let num of numbers) {
-        total += num;
+        discount = 0;
     }
 
-    return total;
+
+    let finalAmount = totalAmount - discount;
+
+    // BOOKING DETAILS
+
+    console.log("");
+ 
+    console.log("BOOKING DETAILS");
+  
+    console.log("Customer Name :", customerName);
+    console.log("Phone Number  :", phone);
+
+    console.log("Room Type     :", roomType);
+    console.log("Room Price    : ₹" + roomPrice);
+
+    console.log("");
+   
+    console.log("Check-in Date :", checkInDate);
+    console.log("Year          :", checkInDate.getFullYear());
+    console.log("Month         :", checkInDate.getMonth() + 1);
+    console.log("Date          :", checkInDate.getDate());
+    console.log("Day           :", checkInDate.getDay());
+
+    console.log("");
+  
+    console.log("Number of Days :", numberOfDays);
+
+    console.log("Check-out Date :", checkOutDate);
+    console.log("Check-out Year :", checkOutDate.getFullYear());
+    console.log("Check-out Month:", checkOutDate.getMonth() + 1);
+    console.log("Check-out Date :", checkOutDate.getDate());
+
+    console.log("");
+  
+    console.log("Room Price / Day :", "₹" + roomPrice);
+    console.log("Total Amount     :", "₹" + totalAmount);
+    console.log("Discount         :", "₹" + discount);
+    console.log("Final Amount     :", "₹" + finalAmount);
+
+    console.log("");
+    console.log("Booking Status   : Confirmed");
+
+    console.log("================================");
+    console.log("       THANK YOU!");
+    console.log("================================");
 }
-
-console.log(sum(10, 20, 30, 40, 50));
-
-// Task 17 – Array Destructuring
-
-let colors = ["Red", "Blue", "Green", "Yellow"];
-
-let [c1, c2, c3, c4] = colors;
-
-console.log(c1);
-console.log(c2);
-console.log(c3);
-console.log(c4);
-
-// Task 18 – Object Destructuring
-
-let user = {
-    name: "Maneesha",
-    city: "Hyderabad",
-    role: "Developer"
-};
-
-let { name, city, role } = user;
-
-console.log(name);
-console.log(city);
-console.log(role);
-
-// Task 19 – Shopping Cart
-
-let cart = ["Mobile", "Laptop", "Watch"];
-
-console.log("Original :", cart);
-
-cart.push("Headphones");
-console.log("After Push :", cart);
-
-cart.pop();
-console.log("After Pop :", cart);
-
-cart.shift();
-console.log("After Shift :", cart);
-
-cart.unshift("Tablet");
-console.log("After Unshift :", cart);
-
-// Task 20 – Product Search
-
-let productsList = [
-    "Laptop",
-    "Mouse",
-    "Keyboard",
-    "Monitor",
-    "Speaker"
-];
-
-if (productsList.includes("Monitor")) {
-    console.log("Product Available");
-} else {
-    console.log("Out of Stock");
-}
-
