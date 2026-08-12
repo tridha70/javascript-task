@@ -1,6 +1,5 @@
-// ========================================
+
 // FETCH PRODUCTS
-// ========================================
 
 fetch("https://fakestoreapi.com/products")
 
@@ -8,10 +7,8 @@ fetch("https://fakestoreapi.com/products")
 
 .then(data => {
 
-    // ========================================
     // TASK 1 - PRODUCT CARDS
-    // ========================================
-
+  
     let task1 = document.querySelector("#task1");
 
     data.forEach(c => {
@@ -31,16 +28,11 @@ fetch("https://fakestoreapi.com/products")
 
             <p>Rating: ${c.rating.rate}</p>
         `;
-
-        task1.append(card);
-
+    });
     });
 
-
-    // ========================================
     // TASK 2 - PRODUCT DESCRIPTION
-    // ========================================
-
+   
     let task2 = document.querySelector("#task2");
 
     data.forEach(c => {
@@ -66,10 +58,8 @@ fetch("https://fakestoreapi.com/products")
     });
 
 
-    // ========================================
     // TASK 3 - PRODUCT LIST
-    // ========================================
-
+    
     let task3 = document.querySelector("#task3");
 
     data.forEach(c => {
@@ -90,13 +80,8 @@ fetch("https://fakestoreapi.com/products")
 
         task3.append(card);
 
-    });
-
-
-    // ========================================
     // TASK 4 - PRODUCT IMAGE GALLERY
-    // ========================================
-
+  
     let task4 = document.querySelector("#task4");
 
     data.forEach(c => {
@@ -109,8 +94,6 @@ fetch("https://fakestoreapi.com/products")
 
     });
 
-
-    // ========================================
     // TASK 5 - CATEGORY DISPLAY
     // ========================================
 
@@ -134,11 +117,8 @@ fetch("https://fakestoreapi.com/products")
 
     });
 
-
-    // ========================================
     // TASK 6 - PRODUCT DETAILS CARD
-    // ========================================
-
+ 
     let task6 = document.querySelector("#task6");
 
     data.forEach(c => {
@@ -173,10 +153,7 @@ fetch("https://fakestoreapi.com/products")
 
     });
 
-
-    // ========================================
     // TASK 7 - RATING DETAILS
-    // ========================================
 
     let task7 = document.querySelector("#task7");
 
@@ -204,11 +181,8 @@ fetch("https://fakestoreapi.com/products")
 
     });
 
-
-    // ========================================
     // TASK 8 - FIRST 20 CHARACTERS
-    // ========================================
-
+   
     let task8 = document.querySelector("#task8");
 
     data.forEach(c => {
@@ -231,11 +205,8 @@ fetch("https://fakestoreapi.com/products")
 
     });
 
-
-    // ========================================
     // TASK 9 - CHANGE BUTTON CONTENT
-    // ========================================
-
+   
     let task9 = document.querySelector("#task9");
 
     data.forEach(c => {
@@ -258,11 +229,8 @@ fetch("https://fakestoreapi.com/products")
 
     });
 
-
-    // ========================================
     // TASK 10 - COMPLETE PRODUCT CARD
-    // ========================================
-
+  
     let task10 = document.querySelector("#task10");
 
     data.forEach(c => {
